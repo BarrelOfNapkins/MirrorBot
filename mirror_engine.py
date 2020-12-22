@@ -65,9 +65,9 @@ class MirrorEngine:
 				current_directory = os.getcwd()
 				os.chdir(config.local_repo_directory)
 				subprocess.check_output(["git", "remote", "add", "upstream",
-                                    f"https://github.com/{config.upstream_owner}/{config.upstream_repo}"])
+									f"git@github.com:{config.upstream_owner}/{config.upstream_repo}"])
 				subprocess.check_output(["git", "remote", "add", "downstream",
-                                    f"https://github.com/{config.downstream_owner}/{config.downstream_repo}"])
+									f"git@github.com:{config.downstream_owner}/{config.downstream_repo}"])
 				os.chdir(current_directory)
 			except:
 				self.logger.critical("An error occured during cloning.")
@@ -100,4 +100,4 @@ class MirrorEngine:
 						repo.get_comment(event.payload["comment"]["id"]).create_reaction("-1")
 						return
 					mirror.remirror_pr(self.upstream, self.downstream,
-					                   event.payload["issue"]["number"])
+									   event.payload["issue"]["number"])

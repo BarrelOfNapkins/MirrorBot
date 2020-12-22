@@ -5,15 +5,15 @@ password =	""
 # or
 api_key =	""
 
-upstream_owner =	""
-upstream_repo =		""
+upstream_owner =	"BarrelOfNapkins2"
+upstream_repo =		"tgstation"
 
-downstream_owner =	""
-downstream_repo =	""
+downstream_owner =	"BarrelOfNapkins"
+downstream_repo =	"tgstation"
 
-local_repo_directory =		"local_downstream_clone"
-mirror_pr_title_prefix =	"[MIRROR] "
+local_repo_directory =		r"D:\Programming_repos\downstream"
+mirror_pr_title_prefix =	"MIRROR-"
 mirror_branch_prefix =		"upstream-merge-"
 
 log_level = logging.INFO
-event_stream_wait = 60
+event_stream_wait = 30
